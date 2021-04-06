@@ -1,4 +1,4 @@
-[
+export default[
   {
     "title": "Fun Fun Function",
     "description": "I’m Mattias Petter Johansson, mpj for short. I’ve been a full-time programmer for about ten years. Among others, I've worked for Absolut Vodka, Blackberry and Spotify.  https://patreon.com/funfunfunction",
