@@ -1,0 +1,1 @@
+firefox - nie działa czyszczenie imputów przy odświeżaniu strony poprzez clearBtn w window.onload

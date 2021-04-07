@@ -1,10 +1,12 @@
-import channels from './channels.js';
+import channels from '../channels.js';
 
+// imperial notation:
 const putCommasBetweenNumbers = (number) => {
     return number
         .split(/(?=(?:\d{3})+$)/).join(",")
 }
 
+// info needed for channels in object for better readability
 export const channelsValues = channels.map(elem => ({
     "title": elem.title,
     "thumbnail": elem.thumbnails.medium.url,
@@ -14,6 +16,7 @@ export const channelsValues = channels.map(elem => ({
     'channelUrl': elem.customUrl
 }))
 
+// channel component:
 const listOfChannels = (arr) => {return arr.map(elem => `
     <a class="channel" id==${elem.title} href=${elem.channelUrl + '?utm_date=' + Date.now()} target="_blank">
         <div class="channel__thumbnailAndTitle">

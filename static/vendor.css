@@ -335,7 +335,7 @@ button:-moz-focusring {
     width: 48%;
   }
 }
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 830px) {
   .channel {
     width: 100%;
   }
