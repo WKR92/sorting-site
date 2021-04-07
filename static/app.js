@@ -3,7 +3,6 @@ import listOfChannels, {channelsValues} from './makeChannelsBlocks.js'
 const mainJSContainer = document.querySelector('.js-content');
 mainJSContainer.innerHTML = listOfChannels(channelsValues).join("");
 let isReverseTurnedOn = false
-let isDarkModeOn = false;
 
 // filters:
 
@@ -121,3 +120,31 @@ reverseBtn.addEventListener('click', () => {
         checkedLi[0].click();
     }
 })
+
+
+// saving info about users entries in localStorage:
+
+const months = ['sty.', 'lut.', 'mar.', 'kwi.', 'maj.', 'cze.', 'lip.', 'sie.', 'wrz.', 'pax.', 'lis.', 'gru.']
+
+let amountOfVisits = localStorage.getItem('amountOfVisits');
+let lastVisitDate = localStorage.getItem('lastVisitDate');
+let ongoingVisit = localStorage.getItem('ongoingVisit');
+
+window.onload = () => {
+    if (amountOfVisits === null) {
+        amountOfVisits = 0;
+    }
+    amountOfVisits++;
+    ongoingVisit = JSON.stringify(`${new Date().getDate()} ${months[new Date().getMonth()]} ${new Date().getFullYear()}.`)
+    localStorage.setItem("amountOfVisits", amountOfVisits);
+    localStorage.setItem("ongoingVisit", ongoingVisit);
+}
+
+window.onbeforeunload = () => {
+    lastVisitDate = JSON.stringify(`${new Date().getDate()} ${months[new Date().getMonth()]} ${new Date().getFullYear()}.`)
+    localStorage.setItem("lastVisitDate", lastVisitDate);
+}
+
+console.log('numOfVisits: ' + JSON.parse(localStorage.getItem('amountOfVisits')))
+console.log('lastVisitDate: ' +JSON.parse(localStorage.getItem('lastVisitDate')))
+console.log('ongoingVisitDate: ' +JSON.parse(localStorage.getItem('ongoingVisit')))
