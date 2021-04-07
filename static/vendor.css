@@ -3,6 +3,9 @@
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+
+  background: white;
+  filter: invert(0);
 }
 
 body {
@@ -76,6 +79,7 @@ button:-moz-focusring {
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
+  margin-bottom: 2px;
 }
 
 .button:active {
@@ -309,10 +313,32 @@ button:-moz-focusring {
 
 .channel {
   margin: 5px 5px 5px 5px;
-  width: 200px;
   height: auto;
   background-color: #fff;
   cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+@media only screen and (min-width: 1300px) {
+  .channel {
+    width: 24%;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .channel {
+    width: 32%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .channel {
+    width: 48%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .channel {
+    width: 100%;
+  }
 }
 
 .channel:hover{
@@ -359,4 +385,57 @@ button:-moz-focusring {
   margin-top: 1px;
   font-weight: bold;
   font-size: 12px;
+}
+
+
+/* sorting block: */
+.orderInfo {
+  margin-left: 10px;
+}
+
+.orderInfo span {
+  color: #ff7b33
+}
+
+
+/* input block: */
+input::-webkit-calendar-picker-indicator {
+  display: none;
+}
+
+
+/* header */
+.header__container {
+  display: flex;
+  align-items: flex-end;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.header__container img {
+  height: 50px;
+  margin-right: 2px;
+}
+
+.header__container h1 {
+  margin-bottom: -3px;
+}
+
+/* dark/light mode */
+#lightModeBtn {
+  display: none;
+}
+
+.container__btn {
+  margin-left: 15px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  background-color: black;
+  height: 2em;
+}
+
+.container__btn:hover {
+  box-shadow: 0px 60px 60px 100px rgba(0, 0, 0, 0.4);
 }

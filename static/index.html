@@ -8,18 +8,23 @@
     </head>
     <body class="wrapper">
         <header class="wrapper__header">
-            <h1 class="header"><span class="header__js-logo"></span> Channels</h1>
+            <div class="header__container">
+                <img alt="js_icon" src="./js_icon.png" />
+                <h1 class="header"><span class="header__js-logo"></span> Channels</h1>
+                <button class="container__btn" id="darkModeBtn">Dark mode</button>
+                <button class="container__btn" id="lightModeBtn">Light mode</button>
+            </div>
         </header>
         <main class="wrapper__main js-content">
         </main>
         <div class="wrapper__filter">
             <div class="filter">
-                <input class="filter__input" type="text" placeholder="filter channels...">
+                <input list="inpHints" class="filter__input" type="text" placeholder="filter channels...">
+                <datalist id="inpHints"></datalist>
             </div>
-            
         </div>
         <aside class="wrapper__aside">
-            <div class="sort"> 
+            <div class="sort">
                 <h3 class="sort__header">Sort channels by:</h3>
                 <ul class="sort__options">
                     <li>
@@ -39,7 +44,8 @@
                         <label class="choice__label" for="sort-views">views</label>
                     </li>
                 </ul>
-                <button class="button">Clear</button>
+                <button id="clearBtn" class="button">Clear</button>
+                <button id="reverseBtn" class="button">Reverse Sorting</button>
             </div>
         </aside>
     </body>
