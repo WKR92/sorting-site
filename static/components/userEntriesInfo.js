@@ -1,6 +1,6 @@
 import createClearBtn from './buttons.js'
 
-const months = ['sty.', 'lut.', 'mar.', 'kwi.', 'maj.', 'cze.', 'lip.', 'sie.', 'wrz.', 'pax.', 'lis.', 'gru.']
+const months = ['sty.', 'lut.', 'mar.', 'kwi.', 'maj.', 'cze.', 'lip.', 'sie.', 'wrz.', 'paź.', 'lis.', 'gru.']
 
 let amountOfVisits = localStorage.getItem('amountOfVisits');
 let lastVisitDate = localStorage.getItem('lastVisitDate');

@@ -6,7 +6,7 @@ const putCommasBetweenNumbers = (number) => {
         .split(/(?=(?:\d{3})+$)/).join(",")
 }
 
-// info needed for channels in object for better readability
+// info needed for channels put in object for better readability
 export const channelsValues = channels.map(elem => ({
     "title": elem.title,
     "thumbnail": elem.thumbnails.medium.url,
