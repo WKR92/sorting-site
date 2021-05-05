@@ -1,3 +1,4 @@
+import './vendor.css';
 import listOfChannels, {channelsValues} from './components/makeChannelsBlocks.js';
 import makeRadioFilters, {makeInputFilter, mainJSContainer} from './components/filters.js';
 import setUserEntryInfoOnBeforeUnLoad, {setUserEntryInfoOnload} from './components/userEntriesInfo.js';
